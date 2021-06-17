@@ -1,0 +1,52 @@
+<button (click)="test(stepper)">Random</button>
+<h2 style="text-align: center;">#2</h2>
+<mat-vertical-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="dataService.initFormGroup">
+    <ng-template matStepLabel>Init</ng-template>
+    <my-init></my-init>
+  </mat-step>
+  <mat-step [stepControl]="dataService.importanceCriteriaForm">
+    <ng-template matStepLabel>Importance of criteria</ng-template>
+    <app-importance-criteria></app-importance-criteria>
+  </mat-step>
+  <mat-step [stepControl]="dataService.expertMatrixForm">
+    <ng-template matStepLabel>Expert assessments</ng-template>
+    <my-expert-matrix></my-expert-matrix>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Show aggregation matrix</ng-template>
+    <app-aggregation-matrix></app-aggregation-matrix>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Show triangular fuzzy numbers</ng-template>
+    <app-triangular-fuzzy-numbers></app-triangular-fuzzy-numbers>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Show matrix of fuzzy numbers on the basis of transformed linguistic terms</ng-template>
+    <app-fuzzy-numbers-transformed-linguistic-terms></app-fuzzy-numbers-transformed-linguistic-terms>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show matrix of optimal values of criteria</ng-template>
+    <app-matrix-optimal-values-criteria></app-matrix-optimal-values-criteria>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show normalized fuzzy matrix</ng-template>
+    <app-normalised-fuzzy-matrix></app-normalised-fuzzy-matrix>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show normalized-weighted fuzzy matrix</ng-template>
+    <app-normalized-weighted-fuzzy-matrix></app-normalized-weighted-fuzzy-matrix>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show overall interval-valued fuzzy performance rating</ng-template>
+    <app-overall-interval-valued-fuzzy-performance-rating></app-overall-interval-valued-fuzzy-performance-rating>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show defuzzification</ng-template>
+    <app-defuzzification></app-defuzzification>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel> Show degree of utility</ng-template>
+    <app-degree-of-utility></app-degree-of-utility>
+  </mat-step>
+</mat-vertical-stepper>
